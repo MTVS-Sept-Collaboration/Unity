@@ -40,11 +40,8 @@ public class Y_ShowTrackingList : MonoBehaviour
     public GameObject rigLeftThumb;
     public GameObject rigLeftIndex;
     public GameObject rigLeftPinky;
-    public GameObject rigRightThumb;
-    public GameObject rigRightIndex;
-    public GameObject rigRightPinky;
 
-
+  
 
     // Start is called before the first frame update
     void Start()
@@ -69,11 +66,8 @@ public class Y_ShowTrackingList : MonoBehaviour
         rigBodyTarget = GameObject.Find("Rig_Body_target");
         rigBodyHint = GameObject.Find("Rig_Body_hint");
         rigLeftThumb = GameObject.Find("Rig_LeftHandThumb_target");
-        rigLeftIndex = GameObject.Find("Rig_LeftHandIndex_target");
-        rigLeftPinky = GameObject.Find("Rig_LeftHandPinky_target");
-        rigRightThumb = GameObject.Find("Rig_RightHandThumb_target");
-        rigRightIndex = GameObject.Find("Rig_RightHandIndex_target");
-        rigRightPinky = GameObject.Find("Rig_RightHandPinky_target");
+        rigLeftIndex = GameObject.Find("Rig_LeftHandIndex_hint");
+        rigLeftPinky = GameObject.Find("Rig_LeftHandPinky_hint");
 
     }
 
@@ -130,9 +124,6 @@ public class Y_ShowTrackingList : MonoBehaviour
         rigLeftThumb.transform.position = UpdateRigPart(22);
         rigLeftIndex.transform.position = UpdateRigPart(20);
         rigLeftPinky.transform.position = UpdateRigPart(18);
-        rigRightThumb.transform.position = UpdateRigPart(21);
-        rigRightIndex.transform.position = UpdateRigPart(19);
-        rigRightPinky.transform.position = UpdateRigPart(17);
 
 
 }
