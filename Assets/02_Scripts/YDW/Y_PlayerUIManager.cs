@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Y_PlayerUIManager : MonoBehaviour
 {
-    public Y_CountSquatt cntSquatScript;
-    public Y_CountJumpingJack cntJumpingJackScript;
+    Y_CountSquatt cntSquatScript;
+    Y_CountJumpingJack cntJumpingJackScript;
     Y_SquatCntUI squatCntUIScript;
     Y_JumpingJackCntUI jumpingJackCntUIScript;
 
@@ -26,8 +26,8 @@ public class Y_PlayerUIManager : MonoBehaviour
     // Start is called before the first frame update
     void LateStart()
     {
-    //    cntSquatScript = GameObject.Find("Player").GetComponent<Y_CountSquatt>();
-    //    cntJumpingJackScript = GameObject.Find("Player").GetComponent<Y_CountJumpingJack>();
+        cntSquatScript = GameObject.Find("Player").GetComponent<Y_CountSquatt>();
+        cntJumpingJackScript = GameObject.Find("Player").GetComponent<Y_CountJumpingJack>();
         squatCntUIScript = GetComponentInChildren<Y_SquatCntUI>();
         jumpingJackCntUIScript = GetComponentInChildren<Y_JumpingJackCntUI>();
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Net;
 using System.Globalization;
 using TMPro;
-//using UnityEditor.PackageManager.Requests;
+using UnityEditor.PackageManager.Requests;
 
 public class UserInfoManager : MonoBehaviour
 {

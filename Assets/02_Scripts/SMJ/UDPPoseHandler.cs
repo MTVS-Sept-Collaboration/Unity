@@ -134,10 +134,7 @@ public class UDPPoseHandler : MonoBehaviour
                 latestImageTexture = DecodeImage(imageToProcess);
                 imageToProcess = null; // 처리 끝난 이후 초기화
                 
-                if (displayWebCam != null)
-                {
-                    displayWebCam.texture = latestImageTexture;
-                }
+                displayWebCam.texture = latestImageTexture;
             }
         }
 

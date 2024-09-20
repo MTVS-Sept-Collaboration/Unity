@@ -18,7 +18,7 @@ public class JSWPhotonVoiceTest : MonoBehaviourPunCallbacks, IPunObservable
     {
         pv = GetComponent<PhotonView>();
         voiceView = GetComponent<PhotonVoiceView>();
-        gameObject.transform.position = PlaySceneManager.instance.playerPositions[photonView.Owner.ActorNumber - 1].position + Vector3.up * 1.4f;
+        gameObject.transform.position = PlaySceneManager.instance.playerPositions[photonView.Owner.ActorNumber - 1].position;
         //AvatarInfo.instance.SettingAvatarInPlay(gameObject);
 
     }

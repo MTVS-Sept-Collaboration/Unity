@@ -117,8 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5864d1e85bff18a479c51557bffe4cb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cntSquatScript: {fileID: 8603493246259551764}
-  cntJumpingJackScript: {fileID: 8198723576876859283}
   squatCntUI: {fileID: 4344131548958931410}
   jumpingJackCntUI: {fileID: 2209211877863614671}
   squatCntUIgo: {fileID: 7311128814992615791}
@@ -1677,7 +1675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7383bff0c9e233419a3616808e011d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setStandardPos: {fileID: 5881271143326230952}
   uiManager: {fileID: 0}
   directionCanvas: {fileID: 3554525800069856597}
   countdownText: {fileID: 2086384891653300572}
