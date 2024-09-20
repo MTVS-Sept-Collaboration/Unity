@@ -269,7 +269,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294054220152711977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -278,7 +278,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.07196045, y: 2.77}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 0.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7425093232421495903
 CanvasRenderer:
@@ -2138,18 +2138,18 @@ MonoBehaviour:
   rHandTrans: {fileID: 166335128771719461}
   ground: {fileID: 0}
   cubes: []
-  leftArmTarget: {fileID: 0}
-  leftArmHint: {fileID: 0}
-  rightArmTarget: {fileID: 0}
-  rightArmHint: {fileID: 0}
-  leftLegTarget: {fileID: 0}
-  leftLegHint: {fileID: 0}
-  rightLegTarget: {fileID: 0}
-  rightLegHint: {fileID: 0}
-  headAim1: {fileID: 0}
-  headAim2: {fileID: 0}
-  spineTarget: {fileID: 0}
-  spineHint: {fileID: 0}
+  leftArmTarget: {fileID: 414687340108065582}
+  leftArmHint: {fileID: 5583657621474563807}
+  rightArmTarget: {fileID: 6894292407194839766}
+  rightArmHint: {fileID: 5305941410685287841}
+  leftLegTarget: {fileID: 2467597950786091128}
+  leftLegHint: {fileID: 8445506257547777047}
+  rightLegTarget: {fileID: 972962960488623899}
+  rightLegHint: {fileID: 2963721664301109934}
+  headAim1: {fileID: 146242756270348144}
+  headAim2: {fileID: 8181400534195546470}
+  spineTarget: {fileID: 6370589271367006251}
+  spineHint: {fileID: 5511210097104148006}
 --- !u!114 &8603493246259551764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,9 +2212,12 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
+  - {fileID: 1283638654564722955}
   - {fileID: 5641490948959948880}
+  - {fileID: 8603493246259551764}
+  - {fileID: 8198723576876859283}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

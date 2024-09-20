@@ -56,7 +56,7 @@ public class Y_UIManager : MonoBehaviour
     public void SelectSquat()
     {
         cntSquat.enabled = true;
-        playerScreenCanvas = GameObject.Find("PlayerScreenCanvas");
+        playerScreenCanvas = PSM.myPlayer.transform.GetChild(3).gameObject;
         playerScreenCanvas.GetComponent<Y_PlayerScreenUIManager>().isSelected = true;
         canvasRenderers = chooseWorkOutCanvas.GetComponentsInChildren<CanvasRenderer>();
         StartCoroutine(decreaseAlpha(canvasRenderers));
@@ -66,7 +66,7 @@ public class Y_UIManager : MonoBehaviour
     public void SelectJumpingJack()
     {
         cntJumpingJack.enabled = true;
-        playerScreenCanvas = GameObject.Find("PlayerScreenCanvas");
+        playerScreenCanvas = PSM.myPlayer.transform.GetChild(3).gameObject;
         playerScreenCanvas.GetComponent<Y_PlayerScreenUIManager>().isSelected = true;
         canvasRenderers = chooseWorkOutCanvas.GetComponentsInChildren<CanvasRenderer>();
         StartCoroutine(decreaseAlpha(canvasRenderers));

@@ -119,7 +119,8 @@ public class JSWConnectionManager : MonoBehaviourPunCallbacks
     {
         base.OnCreatedRoom();
         print(MethodInfo.GetCurrentMethod().Name + " is Call!");
-        StartCoroutine(SendRoomInfo("POST", PhotonNetwork.CurrentRoom.Name, PlayerPrefs.GetString("userId")));
+        // 이따가 다시 원상복구
+        //StartCoroutine(SendRoomInfo("POST", PhotonNetwork.CurrentRoom.Name, PlayerPrefs.GetString("userId")));
     }
 
     public override void OnJoinedRoom()

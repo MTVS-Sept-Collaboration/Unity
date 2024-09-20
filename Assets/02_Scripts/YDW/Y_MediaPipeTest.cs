@@ -7,9 +7,12 @@ using System.Linq;
 using System;
 using System.Runtime.InteropServices.WindowsRuntime;
 using static UnityEngine.GraphicsBuffer;
+using Photon.Pun;
+using Photon.Realtime;
 
 
-public class Y_MediaPipeTest : MonoBehaviour
+
+public class Y_MediaPipeTest : MonoBehaviour, IPunObservable
 {
     public UDPPoseHandler conn;
 
@@ -37,6 +40,9 @@ public class Y_MediaPipeTest : MonoBehaviour
     //Y_CountSquatt countSquatt;
     //Y_CountJumpingJack countJumpingJack;
 
+    Vector3[] PD = new Vector3[33];
+    PhotonView pv;
+
     public GameObject[] cubes; // 관절 따라 다니게 해 보면서 정확도 맞추자
 
     // Rigging
@@ -58,10 +64,19 @@ public class Y_MediaPipeTest : MonoBehaviour
     // conn 의 랜드마크리스트에서 특정 인덱스를 이용, 벡터로 만들어서 가져온다
     public Vector3 getV3FromLandmark(int i)
     {
-        Vector3 localPos = new Vector3(
+        Vector3 localPos;
+        if (pv.IsMine)
+        {
+            localPos = new Vector3(
                     conn.latestPoseList[i].x,
                     conn.latestPoseList[i].y,
                     conn.latestPoseList[i].z);
+        }
+        else
+        {
+            localPos = PD[i];
+        }
+
         localPos.z *= 0.3f;
         return localPos;
     }
@@ -85,6 +100,7 @@ public class Y_MediaPipeTest : MonoBehaviour
 
     void Start()
     {
+        pv = GetComponent<PhotonView>();
         conn = GameObject.Find("UDPConnector").GetComponent<UDPPoseHandler>();
         ground = GameObject.Find("Ground_01");
         groundLevel = ground.transform.position.y;
@@ -93,18 +109,20 @@ public class Y_MediaPipeTest : MonoBehaviour
 
     private void InitializeRigParts()
     {
-        leftArmTarget = GameObject.Find("Rig_LeftArm_target");
-        leftArmHint = GameObject.Find("Rig_LeftArm_hint");
-        rightArmTarget = GameObject.Find("Rig_RightArm_target");
-        rightArmHint = GameObject.Find("Rig_RightArm_hint");
-        leftLegTarget = GameObject.Find("Rig_LeftLeg_target");
-        leftLegHint = GameObject.Find("Rig_LeftLeg_hint");
-        rightLegTarget = GameObject.Find("Rig_RightLeg_target");
-        rightLegHint = GameObject.Find("Rig_RightLeg_hint");
-        headAim1 = GameObject.Find("Aim1");
-        headAim2 = GameObject.Find("Aim2");
-        spineTarget = GameObject.Find("Rig_Spine_target");
-        spineHint = GameObject.Find("Rig_Spine_hint");
+        //leftArmTarget = GameObject.Find("Rig_LeftArm_target");
+        //leftArmHint = GameObject.Find("Rig_LeftArm_hint");
+        //rightArmTarget = GameObject.Find("Rig_RightArm_target");
+        //rightArmHint = GameObject.Find("Rig_RightArm_hint");
+        //leftLegTarget = GameObject.Find("Rig_LeftLeg_target");
+        //leftLegHint = GameObject.Find("Rig_LeftLeg_hint");
+        //rightLegTarget = GameObject.Find("Rig_RightLeg_target");
+        //rightLegHint = GameObject.Find("Rig_RightLeg_hint");
+        //headAim1 = GameObject.Find("Aim1");
+        //headAim2 = GameObject.Find("Aim2");
+        //spineTarget = GameObject.Find("Rig_Spine_target");
+        //spineHint = GameObject.Find("Rig_Spine_hint");
+
+
 
     }
 
@@ -303,6 +321,37 @@ public class Y_MediaPipeTest : MonoBehaviour
         }
 
         return finalVector;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        //throw new NotImplementedException();
+        if (stream.IsWriting)
+        {
+
+            // iterable 데이터를 보낸다.
+            for (int i = 0; i < 33; i++)
+            {
+
+                stream.SendNext(new Vector3(
+                    conn.latestPoseList[i].x,
+                    conn.latestPoseList[i].y,
+                    conn.latestPoseList[i].z));
+            }
+
+
+
+        }
+        // 그렇지 않고, 만일 데이터를 서버로부터 읽어오는 상태라면...
+        else if (stream.IsReading)
+        {
+
+            for (int i = 0; i < 33; i++)
+            {
+                PD[i] = (Vector3)stream.ReceiveNext();
+            }
+
+        }
     }
 
 
