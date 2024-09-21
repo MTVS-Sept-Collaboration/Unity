@@ -56,19 +56,13 @@ public class Y_CountSquatt : MonoBehaviour, IPunObservable
             //print("y 좌표 : " + pelvisPos.position.y);
             if (pelvisPos.position.y < 3.35f && !isSquatting) // 3.25
             {
-                if (pv.IsMine)
-                {
                     squatCount++;
-                    isSquatting = true;
-                }                
+                    isSquatting = true;         
             }
         
             if(pelvisPos.position.y > 3.45f && isSquatting) // 3.35
             {
-                if (pv.IsMine)
-                {
                     isSquatting = false;
-                }
             }
         }
     }

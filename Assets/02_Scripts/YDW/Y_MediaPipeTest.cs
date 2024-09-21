@@ -64,20 +64,24 @@ public class Y_MediaPipeTest : MonoBehaviour, IPunObservable
     // conn 의 랜드마크리스트에서 특정 인덱스를 이용, 벡터로 만들어서 가져온다
     public Vector3 getV3FromLandmark(int i)
     {
-        Vector3 localPos;
-        if (pv.IsMine)
-        {
-            localPos = new Vector3(
-                    conn.latestPoseList[i].x,
-                    conn.latestPoseList[i].y,
-                    conn.latestPoseList[i].z);
-        }
-        else
-        {
-            localPos = PD[i];
-        }
+        Vector3 localPos = Vector3.zero;
 
-        localPos.z *= 0.3f;
+        if (conn.latestPoseList.Count > 0)
+        {
+            if (pv.IsMine)
+            {
+                localPos = new Vector3(
+                        conn.latestPoseList[i].x,
+                        conn.latestPoseList[i].y,
+                        conn.latestPoseList[i].z);
+            }
+            else
+            {
+                localPos = PD[i];
+            }
+
+            localPos.z *= 0.3f;
+        }
         return localPos;
     }
 
