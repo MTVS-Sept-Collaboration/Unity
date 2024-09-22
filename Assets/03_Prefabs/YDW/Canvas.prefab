@@ -1323,6 +1323,7 @@ MonoBehaviour:
   timerPanel: {fileID: 3352204870466635465}
   resultPanel: {fileID: 6612900637517700682}
   uiManager: {fileID: 6044088219391220527}
+  win: {fileID: 0}
   allReadyGo: 0
 --- !u!114 &6044088219391220527
 MonoBehaviour:
@@ -1341,7 +1342,6 @@ MonoBehaviour:
   cntSquat: {fileID: 0}
   chooseWorkOutCanvas: {fileID: 5607360374884969541}
   PSM: {fileID: 0}
-  StartButton: {fileID: 1134348020871603540}
   LoadingPanel: {fileID: 3124877693640147543}
   LoadingPanelNotMaster: {fileID: 2879630106920516673}
 --- !u!114 &6591152264541373684
@@ -1364,6 +1364,8 @@ MonoBehaviour:
   cnt3st: {fileID: 5502671943031989158}
   rankPanel: {fileID: 6612900637517700682}
   img3rd: {fileID: 1238211245745949267}
+  cntJJ: {fileID: 0}
+  cntS: {fileID: 0}
 --- !u!1 &3352204870466635465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1463,7 @@ MonoBehaviour:
   timerPanel: {fileID: 0}
   resultPanel: {fileID: 0}
   uiManager: {fileID: 6044088219391220527}
+  win: {fileID: 0}
   allReadyGo: 0
 --- !u!1 &3428420768979588784
 GameObject:

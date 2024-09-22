@@ -19,6 +19,7 @@ public class Y_TimerUI : MonoBehaviour
     public GameObject resultPanel;
 
     public Y_UIManager uiManager;
+    public WinnerCloseup win;
     CanvasRenderer[] canvasRenderers;
     public bool allReadyGo;
 
@@ -45,6 +46,7 @@ public class Y_TimerUI : MonoBehaviour
             {
                 timerPanel.SetActive(false); // 타이머 없애고
                 resultPanel.SetActive(true); // 결과창 서서히 띄운다
+                win.PerformWinnerCloseup();
                 canvasRenderers = resultPanel.GetComponentsInChildren<CanvasRenderer>();
                 StartCoroutine(uiManager.IncreaseAlpha(canvasRenderers));
 

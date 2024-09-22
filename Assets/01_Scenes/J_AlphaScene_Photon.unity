@@ -3283,6 +3283,11 @@ PrefabInstance:
       propertyPath: PSM
       value: 
       objectReference: {fileID: 653898896}
+    - target: {fileID: 67568622886988689, guid: 65943aec8ef2fd74889fc45eacbc2762,
+        type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1054980438}
     - target: {fileID: 1865802829740600935, guid: 65943aec8ef2fd74889fc45eacbc2762,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3398,16 +3403,16 @@ PrefabInstance:
       propertyPath: PSM
       value: 
       objectReference: {fileID: 653898896}
-    - target: {fileID: 6612900637517700682, guid: 65943aec8ef2fd74889fc45eacbc2762,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7417609932998429092, guid: 65943aec8ef2fd74889fc45eacbc2762,
         type: 3}
       propertyPath: PSM
       value: 
       objectReference: {fileID: 653898896}
+    - target: {fileID: 7417609932998429092, guid: 65943aec8ef2fd74889fc45eacbc2762,
+        type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1054980438}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3782,8 +3787,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rankUI: {fileID: 915870708}
   mainCamera: {fileID: 330585545}
-  closeUpDuration: 5
   closeUpDistance: 2
+  moveTime: 1
 --- !u!4 &1054980439
 Transform:
   m_ObjectHideFlags: 0
