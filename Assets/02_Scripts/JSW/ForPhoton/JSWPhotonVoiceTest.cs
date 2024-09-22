@@ -217,9 +217,29 @@ public class JSWPhotonVoiceTest : MonoBehaviourPunCallbacks, IPunObservable
     [PunRPC]
     public void AllReadyGo()
     {
-        y_timerUI.allReadyGo = true;
+        StartCoroutine(CountingBeforeSquat());
+        //y_timerUI.allReadyGo = true;
+
     }
 
+
+
+    public IEnumerator CountingBeforeSquat()
+    {
+
+        y_uiManager.BeforeStartUI.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "2";
+        yield return new WaitForSeconds(1f);
+        y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "1";
+        yield return new WaitForSeconds(1f);
+        y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "0";
+        yield return new WaitForSeconds(1f);
+        y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "Start!!";
+        yield return new WaitForSeconds(1f);
+        y_uiManager.BeforeStartUI.SetActive(false);
+        y_timerUI.allReadyGo = true;
+    }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {

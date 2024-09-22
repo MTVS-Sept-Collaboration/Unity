@@ -25,6 +25,9 @@ public class Y_UIManager : MonoBehaviour
     bool isnextPanel;
     bool endSelect;
 
+    public GameObject BeforeStartUI;
+
+
     GameObject playerScreenCanvas;
     
 
