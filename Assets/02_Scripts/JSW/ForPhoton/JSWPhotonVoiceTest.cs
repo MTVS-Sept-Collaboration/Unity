@@ -31,7 +31,9 @@ public class JSWPhotonVoiceTest : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject GameStartReady;
     public bool mineHasStart;
     public bool otherHasStart;
-    
+
+    public GameObject infoUI;
+    public Vector3[] infoVector;
 
     bool allStart;
 
@@ -44,6 +46,7 @@ public class JSWPhotonVoiceTest : MonoBehaviourPunCallbacks, IPunObservable
         //AvatarInfo.instance.SettingAvatarInPlay(gameObject);
         y_uiManager = GameObject.Find("Canvas").GetComponent<Y_UIManager>();
         y_timerUI = GameObject.Find("Canvas").GetComponent<Y_TimerUI>();
+        infoUI.GetComponent<RectTransform>().localPosition = infoVector[photonView.Owner.ActorNumber - 1];
     }
 
     bool isStart;
