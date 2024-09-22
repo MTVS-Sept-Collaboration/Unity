@@ -54,8 +54,7 @@ public class WinnerCloseup : MonoBehaviour
         // 카메라 위치 계산: 타겟의 뒤쪽에 위치
         Vector3 targetPosition = target.position - target.forward * closeUpDistance;
 
-        // 카메라가 바라볼 지점 계산: 타겟의 약간 왼쪽
-        Vector3 lookAtPoint = target.position + (-target.right * leftOffset);
+        Vector3 lookAtPoint = target.position + (target.right * leftOffset);
 
         // 타겟의 왼쪽을 바라보는 회전 계산
         Quaternion targetRotation = Quaternion.LookRotation(lookAtPoint - targetPosition);

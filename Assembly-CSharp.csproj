@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</ProjectGuid>
+    <ProjectGuid>{0070EA22-9130-034D-C4DB-B3EE4D432561}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -613,6 +613,18 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.38f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
@@ -1278,103 +1290,103 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2662B409-6332-1E56-D797-C9025C53BDD6}</Project>
+      <Project>{061CC7C0-0A83-D6AF-AFEB-259E9ED6AC65}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{EB0C2DAA-1B0D-422D-4043-E18B5BD01DAB}</Project>
+      <Project>{538B7D1E-197F-2DF3-A221-0484BB763A5F}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.API.csproj">
-      <Project>{6259F234-78EA-8767-A142-D610A1E704D4}</Project>
+      <Project>{A45C09CD-88E9-79C5-AA29-7ED3632FC02B}</Project>
       <Name>PhotonVoice.API</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{CE13EAB9-5EC5-2FC9-0E32-0EBA8D038822}</Project>
+      <Project>{5FCE9F98-C2B3-AB44-CC12-2988846C46FF}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.csproj">
-      <Project>{E858926D-1EAA-1801-384D-DE4C0FEEC8D1}</Project>
+      <Project>{D0D6D0FD-3C29-783F-D3AF-5A45FFE9D077}</Project>
       <Name>PhotonVoice</Name>
     </ProjectReference>
     <ProjectReference Include="gpm_common.csproj">
-      <Project>{EF6B8E22-62AF-A6AF-8905-0A1DE80CD9EB}</Project>
+      <Project>{441A1913-5A39-8FEE-A7BA-B0D2CC5C5000}</Project>
       <Name>gpm_common</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{8AB4389A-1B3A-626F-3CE2-489B7AD29E72}</Project>
+      <Project>{8FCACED7-53AE-7F82-B51C-25AC59F5CFFA}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.csproj">
-      <Project>{BF6B6EC4-DE81-8A0E-BA22-7755E019433C}</Project>
+      <Project>{F9E9AAD0-CDC0-305F-33CD-C1F87E30238B}</Project>
       <Name>PhotonVoice.PUN</Name>
     </ProjectReference>
     <ProjectReference Include="MicAmplifierEditor.Editor.csproj">
-      <Project>{9D4FC19F-15F7-BCA5-7E48-68EA3F906453}</Project>
+      <Project>{EF4472C4-E678-7707-1AB1-90645E682CC1}</Project>
       <Name>MicAmplifierEditor.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{92F606F5-7D76-1782-33CE-1AB54C3B221F}</Project>
+      <Project>{D58D277D-C650-2390-DC0C-4A8A023F4EA1}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{D9468CFF-77D4-2CCF-B372-F7E5C8369E7C}</Project>
+      <Project>{AAAB6006-9828-7FCE-2D05-81F86B65127A}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{28A8A4B7-ED68-0304-55F0-9AAE7AA48A16}</Project>
+      <Project>{B3CD590F-DD05-1CFA-5E48-305584B9B456}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Voice.FMOD.Editor.csproj">
-      <Project>{F4D81499-CA5E-A8E7-14B4-3EFFF06D7CAA}</Project>
+      <Project>{4DC6E2D3-8EAB-2BF0-EFCD-1EADBC73E5DA}</Project>
       <Name>Voice.FMOD.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{91373B03-D5A1-CE98-5341-E9664A64C870}</Project>
+      <Project>{6F509FD2-31A9-83DD-D1F6-F963368B143B}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{D45C659B-A7C1-8CFA-2FFD-0A7D74AC5F70}</Project>
+      <Project>{5056B6B7-A193-95D6-EC71-E4FFD6D62FC7}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{1BAFDB99-B5A6-68D9-B76D-7685A1949966}</Project>
+      <Project>{491D093B-0233-4485-98ED-69284C835168}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Editor.csproj">
-      <Project>{C94C2FBD-C6B5-C729-9C3E-8ADF2EA5F31F}</Project>
+      <Project>{7F521D58-1904-5837-46B4-88434988FED6}</Project>
       <Name>PhotonVoice.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="gpm_webview.csproj">
-      <Project>{D9025F85-577C-4F0F-1893-1E755C0B0E63}</Project>
+      <Project>{9E1274DC-8DF8-1FC2-528B-752D407ECAC0}</Project>
       <Name>gpm_webview</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
-      <Project>{121BA13A-7418-6722-43C5-0B5C826BC668}</Project>
+      <Project>{56592F65-71BE-D23F-236D-259744C5A09B}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
-      <Project>{65336579-2AE1-B7E5-6C15-807B955992DA}</Project>
+      <Project>{ADDA732F-7110-7288-3561-58EF0485AC97}</Project>
       <Name>PhotonVoice.Utilities.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{FAEB06E4-FF01-DFFD-C354-89E519F95FDB}</Project>
+      <Project>{DF471852-8DA1-5ED2-1D39-1E6614EDC23E}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
-      <Project>{0F9672A0-8CA2-9870-CA18-9B0EA645E41D}</Project>
+      <Project>{55A34E7A-89B3-A309-ADB0-9D96DF8A10E8}</Project>
       <Name>PhotonVoice.PUN.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{A599F426-91E9-5311-268C-DC1EEB76D0C1}</Project>
+      <Project>{F6935145-A4D7-F049-3BB6-91B2363924A9}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="gpm_communicator.csproj">
-      <Project>{7A502746-8BFF-2ABF-7AAF-1529D5A7CEBB}</Project>
+      <Project>{CB073D91-3A1B-5966-8957-0A69A0EF68A7}</Project>
       <Name>gpm_communicator</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{5E2075E4-E473-1BFB-A9BB-E3BE10FBA146}</Project>
+      <Project>{87D0022E-C964-10B1-746E-86E82DCABC61}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
   </ItemGroup>
