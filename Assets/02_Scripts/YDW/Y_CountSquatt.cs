@@ -77,7 +77,8 @@ public class Y_CountSquatt : MonoBehaviour, IPunObservable
             if (pelvisPos.position.y - startPelvisPos < 3.58f && !isSquatting) // 3.35
             {
                     squatCount++;
-                    isSquatting = true;         
+                    isSquatting = true;
+                    JSWSoundManager.Get().PlayEftSound(JSWSoundManager.ESoundType.EFT_GETSCORE);
             }
         
             if(pelvisPos.position.y - startPelvisPos > 3.67f && isSquatting) // 3.45

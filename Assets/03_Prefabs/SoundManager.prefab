@@ -311,6 +311,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c987b952b8910594798172752800ef1c, type: 3}
   - {fileID: 8300000, guid: 81652031b64c342cc8dbc59c138d77c5, type: 3}
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  - {fileID: 8300000, guid: 72a841101da5eb642825db999f3f001a, type: 3}
+  - {fileID: 8300000, guid: 127a9d2b736ee7f408ecff929852f717, type: 3}
+  - {fileID: 8300000, guid: df894c7ab4158964aa32f18d4d0004f5, type: 3}
   bgmAudios:
   - {fileID: 8300000, guid: c05722a6e31563f41aecf4ba228e1a8c, type: 3}
   - {fileID: 8300000, guid: 7b598b14b2319974d8d04f426260d9fd, type: 3}

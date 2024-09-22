@@ -226,17 +226,18 @@ public class JSWPhotonVoiceTest : MonoBehaviourPunCallbacks, IPunObservable
 
     public IEnumerator CountingBeforeSquat()
     {
-
+        JSWSoundManager.Get().PlayEftSound(JSWSoundManager.ESoundType.EFT_COUNDOWN);
         y_uiManager.BeforeStartUI.SetActive(true);
-        yield return new WaitForSeconds(1f);
         y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "2";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "1";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
         y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "0";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         y_uiManager.BeforeStartUI.GetComponent<TMP_Text>().text = "Start!!";
+        JSWSoundManager.Get().PlayEftSound(JSWSoundManager.ESoundType.EFT_GAMESTART);
         yield return new WaitForSeconds(1f);
+        JSWSoundManager.Get().PlayBgmSound(JSWSoundManager.EBgmType.BGM_Playing);
         y_uiManager.BeforeStartUI.SetActive(false);
         y_timerUI.allReadyGo = true;
     }

@@ -79,6 +79,7 @@ public class Y_CountJumpingJack : MonoBehaviour, IPunObservable
                 jumpingJackCount++;
                 isJumpingJack = true;
                 //print("!!!!!!!! 손 좌표 : " + leftHandPos.position.y + " 오른손도!! : " + rightHandPos.position.y);
+                JSWSoundManager.Get().PlayEftSound(JSWSoundManager.ESoundType.EFT_GETSCORE);
 
             }
 

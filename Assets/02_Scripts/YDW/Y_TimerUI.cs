@@ -44,6 +44,8 @@ public class Y_TimerUI : MonoBehaviour
 
             if (elapsedTime > duration)
             {
+                JSWSoundManager.Get().PlayBgmSound(JSWSoundManager.EBgmType.BGM_END);
+                JSWSoundManager.Get().PlayEftSound(JSWSoundManager.ESoundType.EFT_ENDINGCHEER);
                 timerPanel.SetActive(false); // 타이머 없애고
                 resultPanel.SetActive(true); // 결과창 서서히 띄운다
                 win.PerformWinnerCloseup();

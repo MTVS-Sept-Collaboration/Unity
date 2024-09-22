@@ -18,7 +18,15 @@ public class JSWSoundManager : MonoBehaviour
         // 프로필 씬 사운드
         EFT_PROFILESCENE,
         // 화면 이동 사운드
-        EFT_SCENEMOVE2
+        EFT_SCENEMOVE2,
+        // 게임 시작시 카운트 다운
+        EFT_COUNDOWN,
+        // 스코어 얻기
+        EFT_GETSCORE,
+        // 게임 시작할 대
+        EFT_GAMESTART,
+        // 게임 끝날 때 함수
+        EFT_ENDINGCHEER
         //// 총1
         //EFT_GUN1,
         //// 총2
@@ -60,7 +68,11 @@ public class JSWSoundManager : MonoBehaviour
         // 메인 브금
         BGM_MAIN,
         // Play 브금
-        BGM_Play
+        BGM_Play,
+        // Playing 브금
+        BGM_Playing,
+        // End브금
+        BGM_END
     }
 
 
